@@ -1,13 +1,27 @@
 html, body {
-    background:linear-gradient(to bottom, #1f1f1f, #000000);
+    /*background:linear-gradient(to bottom, #1f1f1f, #000000);*/
+    background-color: black;
     margin: 0;
     padding: 0;
     color: aliceblue;
 }
 
-header {
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 100px); /*สร้าง 1 แถวที่มีความสูง 100px*/
+    grid-template-columns: 1fr 4fr 1fr;
+    gap: 10px;
+}
+
+.item {
+    text-align: center;
+}
+
+/*grid grid-flow-col grid-row-3 gap-4 {
     font-size: 18px;
     position: sticky;
+    padding-inline: 50px;
     top: 0;
     background-color: #ffffff;
     color: #000000;
@@ -26,4 +40,4 @@ header {
 li {
     list-style-type: none;
     display: inline-block;
-}
+}*/
