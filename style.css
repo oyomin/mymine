@@ -1,22 +1,61 @@
 html, body {
     /*background:linear-gradient(to bottom, #1f1f1f, #000000);*/
-    background-color: black;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
-    color: aliceblue;
+    color: #2a2a2a;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 100px); /*สร้าง 1 แถวที่มีความสูง 100px*/
-    grid-template-columns: 1fr 4fr 1fr;
-    gap: 10px;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "siderbar footer footer footer";
 }
 
-.item {
-    text-align: center;
+nav {
+    background-color:#76f4e7;
+    grid-area: nav;
 }
+
+main {
+    background-color: #509b9f;
+    grid-area: main;
+}
+
+.sidebar {
+    background-color: #496e62;
+    grid-area: sidebar;
+}
+
+.content1 {
+    background-color: #509b9f;
+    grid-area: content1;
+}
+
+.content2 {
+    background-color: #509b9f;
+    grid-area: content2;
+}
+
+.content3 {
+    background-color: #509b9f;
+    grid-area: content3;
+}
+
+footer {
+    background-color: #13908a;
+    grid-area: footer;
+}
+
+
+/*@media only screen end ()*/
+
 
 /*grid grid-flow-col grid-row-3 gap-4 {
     font-size: 18px;
